@@ -33,6 +33,9 @@ cloudinary.config({
   api_key: "263287543194193",
   api_secret: "wCet2_ild7fRo7Of_iCERRBPU8k",
 });
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.use("/api/v1/payment", require("./routes/payment"));
 app.use("/api/v1/product", require("./routes/product"));
