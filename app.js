@@ -42,10 +42,10 @@ app.use("/api/v1/auth", require("./routes/user"));
 app.use("/api/v1/dashboard", require("./routes/dashboard"));
 app.use("/api/v1/userstore", require("./routes/userstore"));
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
-app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
+// app.get("*", (_, res) => {
+//   res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+// });
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });
