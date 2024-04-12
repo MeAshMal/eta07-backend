@@ -12,9 +12,12 @@ const app = express();
 
 (async () => {
   try {
-    const conn = await mongoose.connect("mongodb://0.0.0.0:27017/", {
-      dbName: "ETA07",
-    });
+    const conn = await mongoose.connect(
+      "mongodb+srv://asharmallick:ashar@cluster0.1hsiqy4.mongodb.net/?retryWrites=true&w=majority",
+      {
+        dbName: "ETA07",
+      }
+    );
     console.log("Db connected", conn.connection.host);
   } catch (error) {
     console.log(`Db connection error ${error}`);
